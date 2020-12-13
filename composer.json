@@ -1,0 +1,41 @@
+{
+    "name": "MrBugMiner/LumenDoc",
+    "description": "Lumen Routes Document Generator",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://MrBugMiner.com/Packages/LumenDoc",
+    "support": {
+        "issues": "https://github.com/MrBugMiner/LumenDoc/issues",
+        "source": "https://github.com/MrBugMiner/LumenDoc"
+    },
+    "authors": [
+        {
+            "name": "Mr Bug Miner",
+            "email": "mrbugminer@gmail.com",
+            "homepage": "https://mrbugminer.com"
+        }
+    ],
+    "require": {
+        "ext-json": "*",
+        "php": "*",
+        "laravel/lumen": "*",
+        "guzzlehttp/guzzle": "*"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "MrBugMiner\\LumenDoc\\": "src/"
+        },
+        "files": []
+    },
+    "autoload-dev": {
+        "psr-4": {},
+        "files": []
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
