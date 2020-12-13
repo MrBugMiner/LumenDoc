@@ -3,19 +3,15 @@
 namespace MrBugMiner\LumenDoc\Classes;
 
 use Exception;
-use Illuminate\Support\Facades\Config;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Exception\RequestException;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Config;
 use Psr\Http\Message\ResponseInterface;
 
 class Generate
 {
-
-    // Token
-    /** @var string $token */
-    private $token = '';
 
     // Scan Data
     /** @var array $scan */
@@ -456,7 +452,7 @@ class Generate
                 $requestHeaders = $routeHeaders;
                 // If Request Need Token , Add Token To Request Headers
                 if ($request['token'] === true) {
-                    $requestHeaders['authorization'] = "authorization: Bearer {$token}";
+                    $requestHeaders['authorization'] = "authorization: {$token}";
                 }
                 $requestHeaders = array_values($requestHeaders);
                 // Request Url Params
