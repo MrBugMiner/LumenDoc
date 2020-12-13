@@ -3,8 +3,8 @@
 namespace MrBugMiner\LumenDoc;
 
 use Illuminate\Support\ServiceProvider;
-use MrBugMiner\LumenDoc\Console\ScanCommand;
 use MrBugMiner\LumenDoc\Console\GenerateCommand;
+use MrBugMiner\LumenDoc\Console\ScanCommand;
 
 class LumenDocServiceProvider extends ServiceProvider
 {
@@ -25,7 +25,7 @@ class LumenDocServiceProvider extends ServiceProvider
 
             // Publish Config File
             $this->publishes([
-                __DIR__ . '/config/lumen-doc.php' => config_path('lumen-doc.php'),
+                __DIR__ . '/config/lumen-doc.php' => $this->app->basePath('/config/lumen-doc.php'),
             ], 'config');
 
             // Commands
